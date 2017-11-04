@@ -2,7 +2,7 @@ package bureau;
 import java.util.*;
 
 public class People {
-	String[] name = {"John", "Juli", "Beck"};
+	String[] name = {"...."};
 	
 	public static void main(String[] args) {
 	People pl = new People();
