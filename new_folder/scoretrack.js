@@ -15,6 +15,7 @@ var reset = false;
 function resetValue(){
 	scoreP1 = 0;
 	scoreP2 = 0;
+	//playing 2 players
 	display[0].textContent = score;
 	display[1].textContent = score;
 	display[0].classList.remove('winner');	//.css style
