@@ -6,7 +6,6 @@ var num = document.querySelector('input[type = Number]');
 var round = document.querySelector('p span');
 var resetButton = document.querySelector('#reset');
 
-//state is 3
 //accumulators
 var score = 0;
 var winningScore = 0;
