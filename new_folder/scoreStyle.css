@@ -1,0 +1,11 @@
+.winner{
+	color: green;
+	font-size: 3.0em;
+	text-shadow: 4px 4px 4px #aaa;
+}
+
+.play{
+	color:red;
+	font-size: 1.50em;
+	/*text-shadow: 4px 4px 4px #aaa;*/
+}

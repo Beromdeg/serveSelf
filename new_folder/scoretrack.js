@@ -1,14 +1,14 @@
-//bread and butter while palying with JS at frontend is select and modify or trun on and off
+//bread and butter while palying with JS at frontend is select and modify or trun on and off css styles
 //selecting the elements
-var displayP1 = document.querySelector('.score-p1');
-var displayP2 = document.querySelector('.score-p2');
+var players = document.querySelectorAll('p button');	
+var display = document.querySelectorAll('h1 span');
 var num = document.querySelector('input[type = Number]');
 var round = document.querySelector('p span');
 var resetButton = document.querySelector('#reset');
 
+//state is 3
 //accumulators
-var scoreP1 = 0;
-var scoreP2 = 0;
+var score = 0;
 var winningScore = 0;
 var reset = false;
 
@@ -16,10 +16,10 @@ var reset = false;
 function resetValue(){
 	scoreP1 = 0;
 	scoreP2 = 0;
-	displayP1.textContent = scoreP1;
-	displayP2.textContent = scoreP2;
-	displayP1.classList.remove('winner');	//.css style
-	displayP2.classList.remove('winner');
+	display[0].textContent = score;
+	display[1].textContent = score;
+	display[0].classList.remove('winner');	//.css style
+	display[1].classList.remove('winner');
 	reset = false;
 }
 
@@ -39,16 +39,18 @@ num.addEventListener('change', function(){
 	});	
 
 //adding our players logic
-p1.addEventListener('click', function(){
-	if(!reset ){		
-		if(scoreP1<winningScore){
-			scoreP1++;
-			displayP1.textContent = scoreP1;
+for(let i=0; i<players.length;i++){		
+	player[i].addEventListener('click', function(){
+		if(!reset ){		
+			if(score<winningScore){
+				score++;
+				display[i].textContent = scoreP1;
+			}	
 		}	
-	}	
-		if(scoreP1 === winningScore && winningScore !== 0){
-			displayP1.classList.add('winner');
+		if(score === winningScore && winningScore !== 0){
+			display[i].classList.add('winner');
 			reset = true;
 		}		
-});
+	});
+}
 
